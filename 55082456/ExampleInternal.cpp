@@ -1,5 +1,8 @@
+// [[Rcpp::depends(RcppArmadillo)]]
 #include <RcppArmadillo.h>
+// [[Rcpp::depends(RcppParallel)]]
 #include <RcppParallel.h>
+//  [[Rcpp::plugins(cpp11)]]
 #include <random>
 #include "ExampleInternal.h"
 
