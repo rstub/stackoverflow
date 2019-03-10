@@ -19,7 +19,7 @@ namespace ExampleInternal{
     std::mt19937 engine(1);
 
     // Create a loop that runs through a selected section of the total Boot_reps
-    for( int k = begin; k < end; k ++){
+    for( std::size_t k = begin; k < end; k ++){
       engine.seed(k);
       arma::vec index = input;
       std::shuffle( index.begin(), index.end(), engine);
