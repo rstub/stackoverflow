@@ -11,14 +11,9 @@ using namespace ExampleInternal;
 
 namespace ExampleInternal{
 
-ExampleInternal::PARALLEL_WORKER{
+  PARALLEL_WORKER::PARALLEL_WORKER(const arma::vec &input, arma::vec &output) : input(input), output(output) {}
 
-  const arma::vec &input;
-  arma::vec &output;
-
-  PARALLEL_WORKER(const arma::vec &input, arma::vec &output) : input(input), output(output) {}
-
-  void operator()(std::size_t begin, std::size_t end){
+  void PARALLEL_WORKER::operator()(std::size_t begin, std::size_t end){
 
 
     std::mt19937 engine(1);
@@ -33,6 +28,5 @@ ExampleInternal::PARALLEL_WORKER{
     }
   }
 
-};
 
 } //Close Namespace

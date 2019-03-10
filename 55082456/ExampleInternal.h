@@ -12,7 +12,14 @@ double myfunc3(arma::vec vec_in){
   return (vec_in[0] +vec_in[1])/Len;
 }
 
-struct PARALLEL_WORKER : RcppParallel::Worker{};
+struct PARALLEL_WORKER : RcppParallel::Worker{
+  const arma::vec &input;
+  arma::vec &output;
+
+  PARALLEL_WORKER(const arma::vec &input, arma::vec &output);
+  void operator()(std::size_t begin, std::size_t end);
+
+};
 
 }
 
