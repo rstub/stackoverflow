@@ -1,0 +1,46 @@
+---
+title: "Chapter 2: A First Linear Program"
+header-includes:
+- \usepackage{longtable}
+- \usepackage{caption}
+output:
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+    toc: TRUE
+    number_sections: true
+  highlight: monochrome
+  monofont: Times New Roman
+  tufte::tufte_html: default
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+---
+
+\pagestyle{headings}
+
+
+```{r setup, include=FALSE}
+library(tufte)
+library(tint)
+library(knitr)
+library(gridExtra)
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(tidy = F)
+knitr::opts_chunk$set(cache = TRUE)
+knitr::opts_chunk$set(width = 30)
+```
+
+This is an example, where we can see that text in the book is affected by the use of command
+monofont: Times New Roman in the YAML. However, we can see that next chunk, the oucome when generating the tuffte_handout pdf is using a different font and also using multiple colors (no only black as in the main body).
+
+
+```{r base_case_no_pipes_step_4}
+
+model0d <- c("example", 6 + 2 <= 2000) 
+#fabrication
+model0e <- c("example", 8 + 6 <= 2000)  
+#assembly
+
+```
+
