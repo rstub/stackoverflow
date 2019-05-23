@@ -3,14 +3,14 @@ title: "Chapter 2: A First Linear Program"
 header-includes:
 - \usepackage{longtable}
 - \usepackage{caption}
+monofont: Times New Roman
 output:
   tufte::tufte_handout:
     citation_package: natbib
     latex_engine: xelatex
     toc: TRUE
     number_sections: true
-  highlight: monochrome
-  monofont: Times New Roman
+    highlight: monochrome
   tufte::tufte_html: default
   tufte::tufte_book:
     citation_package: natbib
