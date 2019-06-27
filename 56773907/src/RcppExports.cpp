@@ -6,6 +6,17 @@
 
 using namespace Rcpp;
 
+// GetBBoxesAsList
+SEXP GetBBoxesAsList(SEXP x);
+RcppExport SEXP _56773907_GetBBoxesAsList(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(GetBBoxesAsList(x));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpparma_hello_world
 arma::mat rcpparma_hello_world();
 RcppExport SEXP _56773907_rcpparma_hello_world() {
@@ -51,6 +62,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_56773907_GetBBoxesAsList", (DL_FUNC) &_56773907_GetBBoxesAsList, 1},
     {"_56773907_rcpparma_hello_world", (DL_FUNC) &_56773907_rcpparma_hello_world, 0},
     {"_56773907_rcpparma_outerproduct", (DL_FUNC) &_56773907_rcpparma_outerproduct, 1},
     {"_56773907_rcpparma_innerproduct", (DL_FUNC) &_56773907_rcpparma_innerproduct, 1},
