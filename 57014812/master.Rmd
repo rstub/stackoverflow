@@ -1,0 +1,56 @@
+---
+
+# https://crsh.github.io/papaja_man/index.html
+
+title             : "Some Title"
+shorttitle        : "HEADER"
+
+author: 
+  - name          : "Name R Here"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Include addresss"
+    email         : "randomemail@usa.edu"
+
+affiliation:
+  - id            : "1"
+    institution   : "Any University"
+
+
+
+author_note: |
+  ....
+
+abstract: |
+  Text here for abstract. 
+
+keywords          : "Keyword1, keyword2, keyword3"
+
+figsintext        : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : yes
+
+lang              : "english"
+class             : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r load_packages, include = FALSE}
+library("papaja")
+```
+
+```{r analysis_preferences}
+# Seed for random number generation
+set.seed(42)
+```
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.path = 'figures/', echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+
+```{r child = 'child.Rmd'}
+```
+

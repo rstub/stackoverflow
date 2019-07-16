@@ -1,0 +1,8 @@
+---
+output: 
+  pdf_document:
+      includes:
+          in_header: preamble.tex
+---
+
+One sentence without highlighting. \hl{Another with highlighting.}
