@@ -1,0 +1,20 @@
+---
+title: "gamtabs test"
+author: "me"
+date: "today"
+output: html_document
+---
+
+```{r model1}
+library(itsadug)
+
+data(simdat)
+m1 <- bam(Y ~ Group+te(Time, Trial, by=Group),  data=simdat)
+summary(m1)
+```
+
+table:
+
+```{r table1, echo=FALSE, results="asis"}
+gamtabs(m1, caption='Summary of m1', type = "HTML")
+````
